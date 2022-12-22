@@ -99,7 +99,7 @@ body {
 
 @media (min-width: 60em) {
     body {
-        background-position: top -500px left -250px, bottom -500px right -300px;
+        background-position: top -500px left -250px, bottom -600px right -200px;
         transition: background-position .3s ease;
     }
 }
@@ -149,6 +149,9 @@ hr {
 .card {
     background-color: var(--clr-neutral-white);
     border-radius: var(--b-radius);
+    -webkit-box-shadow: 0px 40px 52px -21px var(--clr-primary-dark-blue);
+    -moz-box-shadow: 0px 40px 52px -21px var(--clr-primary-dark-bluey);
+    box-shadow: 0px 40px 52px -21px var(--clr-primary-dark-blue);
 }
 
 .card-person {
