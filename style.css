@@ -6,7 +6,11 @@
     --clr-primary-dark-blue: hsl(227, 10%, 46%);
     --clr-neutral-dark-gray: hsl(0, 0%, 59%);
 
+    --clr-neutral-white: #fff;
+
     --fs-400: 1.8rem;
+
+    --b-radius: 1rem;
 }
 
 /* Box sizing rules */
@@ -80,14 +84,102 @@ svg {
 /* general */
 body {
     margin-inline: auto;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-primary-dark-cyan);
+    background-image: url(./images/bg-pattern-top.svg),
+        url(./images/bg-pattern-bottom.svg);
+    background-position: top -600px left -700px, bottom -600px right -700px;
+    background-repeat: no-repeat;
+    transition: background-position .3s ease;
+}
+
+@media (min-width: 60em) {
+    body {
+        background-position: top -500px left -250px, bottom -500px right -300px;
+        transition: background-position .3s ease;
+    }
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    background: var(--clr-primary-dark-blue);
+    opacity: 0.3;
 }
 
 /* utilities */
+.border-radius {
+    border-top-left-radius: var(--b-radius);
+    border-top-right-radius: var(--b-radius);
+}
 
+.text-weight-400 {
+    font-weight: 400;
+}
 
+.text-weight-700 {
+    font-weight: 700;
+}
+
+.text-size-500 {
+    font-size: 1.8rem;
+}
+
+.text-size-300 {
+    font-size: 1.5rem;
+}
+
+.text-size-200 {
+    font-size: 1rem;
+}
+
+.text-color-dark {
+    color: var(--clr-primary-very-dark-blue);
+}
+
+.text-color-light {
+    color: var(--clr-primary-dark-blue);
+}
 
 /* components */
+.card {
+    background-color: var(--clr-neutral-white);
+    border-radius: var(--b-radius);
+}
+
+.card-person {
+    padding-top: 7rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-person img {
+    position: absolute;
+    bottom: 50%;
+    border-radius: 50%;
+    border: 5px solid var(--clr-neutral-white);
+}
+
+.card-socials {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.card-socials p {
+    letter-spacing: 2px;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -95,4 +187,5 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+    text-decoration: none;
 }
